@@ -20,6 +20,7 @@ class School
   
   def sort
     roster.each do |grade, students|
+      students = students.sort
       { grade: students }
     end
   end
