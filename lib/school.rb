@@ -19,8 +19,10 @@ class School
   end
   
   def sort
-    roster.map do |grade, students|\
-      { grade: students.sort }
+    collect = {}
+    roster.each do |grade, students|\
+      collect << { grade: students.sort }
     end
+    collect
   end
 end
