@@ -20,8 +20,8 @@ class School
   
   def sort
     collect = {}
-    roster.each do |grade, students|\
-      collect << { grade: students.sort }
+    roster.each do |grade, students|
+      collect[grade] = students.sort
     end
     collect
   end
